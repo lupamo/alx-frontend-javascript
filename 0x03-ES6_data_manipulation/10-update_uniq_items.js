@@ -1,6 +1,6 @@
 export default function updateUniqueItems(mapper) {
   if (!(mapper instanceof Map)) {
-	throw new Error('Cannot process');
+    throw new Error('Cannot process');
   }
 
   for (const [key, value] of mapper) {

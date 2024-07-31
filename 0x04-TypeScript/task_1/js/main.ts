@@ -14,15 +14,32 @@ interface Directors extends Teacher {
 interface PrintTeacherFunction {
   (firstName: string, lastName: string): string;
 }
+
+interface IStudentConstructor {
+  new (firstName: string, lastName: string): StudentClass;
+}
   
-  // Example usage:
-  const teacher3: Teacher = {
-	firstName: 'John',
-	fullTimeEmployee: false,
-	lastName: 'Doe',
-	location: 'London',
-	contract: false,
-  };
+  // Interface for the StudentClass methods
+interface IStudentClass {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+class StudentClass implements IStudentClass {
+	private firstName: string;
+	private lastName: string;
   
-  console.log(teacher3);
+	constructor(firstName: string, lastName: string) implements IStudentConstructor {
+	  this.firstName = firstName;
+	  this.lastName = lastName;
+	}
+  
+	workOnHomework(): string {
+	  return "Currently working";
+	}
+  
+	displayName(): string {
+	  return this.firstName;
+	}
+  }
   

@@ -10,3 +10,4 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - How to merge declarations
 - How to use an ambient Namespace to import an external library
 - Basic nominal typing with Typescript
+https://intranet.alxswe.com/corrections/41753545/correct
